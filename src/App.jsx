@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
 import "./App.css";
+import Header from "./components/Header";
 
 const App = () => {
   const [tasks, setTasks] = useState([
@@ -50,6 +51,7 @@ const App = () => {
   return (
     <>
       <div className="container">
+        <Header />
         <AddTask handleTaskAddition={handleTaskAddition} />
         <Tasks
           tasks={tasks}
